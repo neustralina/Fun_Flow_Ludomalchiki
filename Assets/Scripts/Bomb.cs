@@ -7,8 +7,8 @@ public class Bomb : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GetComponent<Collider>().enabled = false;
-            GameController.Instance.Explode();
+
+            GameController.Instance.LoseLife();
         }
     }
-
 }
