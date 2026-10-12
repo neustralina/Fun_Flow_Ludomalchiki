@@ -18,6 +18,7 @@ public class Bomb : MonoBehaviour
                 AudioSource.PlayClipAtPoint(explosionSound, transform.position);
 
             GameController.Instance.LoseLife();
+            Destroy(gameObject);
         }
     }
 }
