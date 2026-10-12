@@ -65,8 +65,7 @@ public class Sword : MonoBehaviour
         newPosition.z = 0f;
         direction = newPosition - transform.position;
 
-        float velocity = direction.magnitude / Time.deltaTime;
-        sliceCollider.enabled = velocity > minSliceVelocity;
+        sliceCollider.enabled = true;
 
         transform.position = newPosition;
     }
