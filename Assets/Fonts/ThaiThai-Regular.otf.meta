@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f3e8894fcc6f4f4b8f5c56877769e91
+guid: 3094e1307dcc8134fb5a20fe3f812cf1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,13 +9,14 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Gang of Three
+  - ThaiThai
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
+  subsetRecipes: []
   userData: 
   assetBundleName: 
   assetBundleVariant: 
