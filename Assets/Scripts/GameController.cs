@@ -89,11 +89,14 @@ public class GameController : MonoBehaviour
     public void LoseLife()
     {
         lives--;
-        UpdateHearts();
 
+        // Обнови отображение сердец (твой существующий код)
+        UpdateHearts(); // или как у тебя называется метод
+
+        // ПРОВЕРКА: если жизни закончились — покажи экран проигрыша
         if (lives <= 0)
         {
-            Explode();
+            GameOverManager.Instance.ShowGameOver();
         }
     }
 
