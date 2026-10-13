@@ -1062,7 +1062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 430, y: 245}
+  m_AnchoredPosition: {x: 370, y: 245}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163253391
@@ -1341,7 +1341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 370, y: 245}
+  m_AnchoredPosition: {x: 430, y: 245}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635348636
@@ -1509,7 +1509,7 @@ MonoBehaviour:
   - {fileID: 3469416261526121853, guid: d5e3dc92758004c448ebb9c91d4562cd, type: 3}
   - {fileID: 1345022896480124042, guid: a90ffa1befc33e4479cfb37fb5dece47, type: 3}
   bombPrefab: {fileID: 502755466114576495, guid: d99c48bb415f49e47980e58f71e639bb, type: 3}
-  bombChance: 0.08
+  bombChance: 0.09
   minSpawnDelay: 0.25
   maxSpawnDelay: 1
   minAngle: -15
@@ -1517,6 +1517,10 @@ MonoBehaviour:
   minForce: 18
   maxForce: 22
   maxLifetime: 5
+  difficultyInterval: 10
+  difficultyStep: 0.1
+  minSpawnDelayLimit: 0.1
+  forceIncrease: 0.5
 --- !u!65 &1865947126
 BoxCollider:
   m_ObjectHideFlags: 0

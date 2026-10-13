@@ -102,13 +102,37 @@ public class GameController : MonoBehaviour
 
     void UpdateHearts()
     {
-        if (hearts == null) return;
-
         for (int i = 0; i < hearts.Length; i++)
         {
             if (hearts[i] != null)
-                hearts[i].enabled = (i < lives);
+                StartCoroutine(AnimateHeart(hearts[i], i < lives));
         }
+    }
+
+    System.Collections.IEnumerator AnimateHeart(Image heart, bool active)
+    {
+        float duration = 0.4f;
+        float elapsed = 0f;
+
+        // Запоминаем ИСХОДНЫЙ масштаб сердечка
+        Vector3 originalScale = heart.transform.localScale;
+        Vector3 startScale = originalScale;
+        Vector3 endScale = active ? originalScale : Vector3.zero;
+        Color startColor = heart.color;
+        Color endColor = active ? Color.white : new Color(1, 1, 1, 0);
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            heart.transform.localScale = Vector3.Lerp(startScale, endScale, t);
+            heart.color = Color.Lerp(startColor, endColor, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        heart.transform.localScale = endScale;
+        heart.color = endColor;
+        heart.enabled = active;
     }
 
     public void Explode()
